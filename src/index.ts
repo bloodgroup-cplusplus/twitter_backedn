@@ -1,10 +1,12 @@
 import express from "express"
+import userRoutes from "./routes/userRoutes"
 
 const app = express();
 
 // when it receives string it doesn't parse it as string it parses it as json 
 
 app.use(express.json());
+app.use(userRoutes);
 
 
 // our first api endpoint
@@ -15,42 +17,8 @@ app.get('/', (req,res)=>{
 //app.METHOD(PATH,HANDLER)
 
 
-
-
-//USER CRUD ENDPOINTS 
-
-//creating a user using post request 
-app.post('/user', (req,res)=>{
-    res.status(501).json({error:"Not implemented"});
-})
-
-
-// List users 
-app.get('/user', (req,res)=>{
-    res.status(501).json({error:"Not implemented"})
-});
-
-
-// get one user via user id from request params 
-app.get('/user/:id', (req,res)=>{
-    res.status(501).json({error:"Not implemented for single user"});
-});
-
-
-// update a user 
-app.put('/user/:id', (req,res)=>{
-    const{id} = req.params; 
-    res.status(501).json({error:`Not implmented:${id}`})
-
-})
-
-// delete user 
-app.delete('user/:id', (req,res)=>{
-    const{id} = req.params ; 
-    res.status(501).json({error:`Not implemented :${id}`});
-})
-
-
+// we will have two crud endpoints one for user and one for tweets 
+//
 
 // listen to request 
 
