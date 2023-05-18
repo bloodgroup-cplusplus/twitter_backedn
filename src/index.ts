@@ -1,5 +1,6 @@
 import express from "express"
 import userRoutes from "./routes/userRoutes"
+import tweetRoutes from "./routes/tweetRoutes"
 
 const app = express();
 
@@ -9,6 +10,10 @@ app.use(express.json());
 // mount route under the applicatoin
 // for all routes starting with user mount there
 app.use("/user",userRoutes);
+
+// mount the tweet route under the application
+// for all routes starting with tweet mount herer 
+app.use('/tweet', tweetRoutes);
 
 
 // our first api endpoint

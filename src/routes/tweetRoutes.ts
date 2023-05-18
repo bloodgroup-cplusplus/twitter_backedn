@@ -27,7 +27,7 @@ router.get('/:id',(req,res)=>{
 
 // update Tweet 
 
-router.put('/id', (req,res)=>{
+router.put('/:id', (req,res)=>{
     const{id} = req.params;
     res.status(501).json({error:`Not Implemented :${id}`})
 });
