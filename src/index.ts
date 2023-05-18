@@ -6,7 +6,9 @@ const app = express();
 // when it receives string it doesn't parse it as string it parses it as json 
 
 app.use(express.json());
-app.use(userRoutes);
+// mount route under the applicatoin
+// for all routes starting with user mount there
+app.use("/user",userRoutes);
 
 
 // our first api endpoint
