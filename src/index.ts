@@ -19,6 +19,8 @@ app.use('/tweet', tweetRoutes);
 // our first api endpoint
 app.get('/', (req,res)=>{
     res.send("Hello world");
+
+
 });
 
 //app.METHOD(PATH,HANDLER)
